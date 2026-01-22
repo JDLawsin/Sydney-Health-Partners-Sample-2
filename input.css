@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-border-blue: #2D3E6B;
+  --color-light-gray: #F3F4F7;
+  --color-lighter-gray: #1F32620D;
+  --color-dark-blue: #1F3262;
+  --color-darker-blue: #1E2B4D;
+  --color-turquoise-surf: #00B2D6;
+  --color-dark-gray: #404040;
+  --color-neutral-gray: #6A6A6A;
+  --color-alice-blue: #EBF7FB;
+  --color-neutral-jet: #1C1C1C;
+  --color-light-orange: #F89848;
+
+  --default-font-family: "Inter";
+  --font-family-inter: "Inter";
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.375rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.5rem;
+  --text-xl--line-height: 2rem;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 2.25rem;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 2.5rem;
+  --text-4xl: 2.75rem;
+  --text-4xl--line-height: 3.25rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+}
+
+@layer components {
+  .primary-btn {
+    background: linear-gradient(90deg, #7B0848 10%, #A41256 100%);
+    @apply rounded-full text-sm font-bold px-6 py-3 text-white;
+  }
+
+  .secondary-btn {
+    @apply bg-darker-blue text-white rounded-full text-sm font-bold px-6 py-3;
+  }
+
+  .outline-btn {
+    @apply border border-dark-blue/30 bg-white text-dark-blue rounded-full text-base font-bold px-8 py-4;
+  }
+
+  .contact-us-btn {
+    @apply rounded-full bg-neutral-jet/40 text-white text-sm font-bold px-4 py-2;
+  }
+
+  .card {
+    @apply rounded-lg bg-white border p-4 gap-4 border-lighter-gray/7;
+  }
+
+  .card-shadow {
+    box-shadow: 0px 2px 32px 12px #14142B08;
+  }
+}
