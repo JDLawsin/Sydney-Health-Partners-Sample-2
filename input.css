@@ -2,17 +2,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-border-blue: #2D3E6B;
-  --color-light-gray: #F3F4F7;
-  --color-lighter-gray: #1F32620D;
-  --color-dark-blue: #1F3262;
-  --color-darker-blue: #1E2B4D;
-  --color-turquoise-surf: #00B2D6;
+  --color-border-blue: #2d3e6b;
+  --color-light-gray: #f3f4f7;
+  --color-lighter-gray: #1f32620d;
+  --color-dark-blue: #1f3262;
+  --color-darker-blue: #1e2b4d;
+  --color-turquoise-surf: #00b2d6;
   --color-dark-gray: #404040;
-  --color-neutral-gray: #6A6A6A;
-  --color-alice-blue: #EBF7FB;
-  --color-neutral-jet: #1C1C1C;
-  --color-light-orange: #F89848;
+  --color-neutral-gray: #6a6a6a;
+  --color-alice-blue: #ebf7fb;
+  --color-neutral-jet: #1c1c1c;
+  --color-light-orange: #f89848;
 
   --default-font-family: "Inter";
   --font-family-inter: "Inter";
@@ -43,9 +43,17 @@
 }
 
 @layer components {
+  /* Primary button styles */
   .primary-btn {
-    background: linear-gradient(90deg, #7B0848 10%, #A41256 100%);
-    @apply rounded-full text-sm font-bold px-6 py-3 text-white;
+    background: linear-gradient(90deg, #7b0848 10%, #a41256 100%);
+    @apply rounded-full cursor-pointer text-white
+           text-xs font-bold px-3 py-1.5
+           md:text-sm md:px-6 md:py-3
+           inline-flex items-center justify-center gap-0 
+           transition-all duration-800 ease-out;
+  }
+  .primary-btn-dot {
+    @apply h-2 w-2 rounded-full bg-white hidden;
   }
 
   .secondary-btn {
@@ -65,6 +73,37 @@
   }
 
   .card-shadow {
-    box-shadow: 0px 2px 32px 12px #14142B08;
+    box-shadow: 0px 2px 32px 12px #14142b08;
+  }
+
+  /* Navigation link styles */
+  .nav-item {
+    @apply flex h-full px-4 transition-all duration-500 ease-out;
+  }
+  .nav-item[data-active="true"] {
+    @apply bg-darker-blue;
+  }
+  .nav-link {
+    @apply relative flex items-center gap-2 text-sm font-bold text-white;
+  }
+  .nav-link-dot {
+    @apply h-1.5 w-1.5 rounded-full bg-turquoise-surf hidden data-[active=true]:block;
+  }
+
+  /* Hover effect for devices that support hover like desktop and laptop */
+  @media (hover: hover) {
+    .primary-btn:hover {
+      @apply gap-2;
+    }
+    .primary-btn:hover .primary-btn-dot {
+      @apply block;
+    }
+
+    .nav-item:hover {
+      @apply bg-darker-blue;
+    }
+    .nav-link:hover .nav-link-dot {
+      @apply block;
+    }
   }
 }

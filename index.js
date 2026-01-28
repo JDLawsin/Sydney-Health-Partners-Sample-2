@@ -1,24 +1,20 @@
-const { createIcons, Search, ChevronRight } = lucide;
-
-// Include only the icons you need.
-createIcons({
-  icons: {
-    Search,
-    ChevronRight,
-  },
-});
-
 // Set active menu item based on current page
 const currentPath = window.location.pathname;
 const navLinks = document.querySelectorAll("nav a");
+
 navLinks.forEach((link) => {
   const href = link.getAttribute("href");
 
   if (`${href}/` === currentPath || currentPath.startsWith(href)) {
+    const parentLi = link.closest("li");
     const indicator = link.querySelector("span");
 
+    if (parentLi) {
+      parentLi.setAttribute("data-active", "true");
+    }
+
     if (indicator) {
-      indicator.classList.remove("hidden");
+      indicator.setAttribute("data-active", "true");
     }
   }
 });
