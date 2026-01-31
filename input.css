@@ -13,6 +13,9 @@
   --color-alice-blue: #ebf7fb;
   --color-neutral-jet: #1c1c1c;
   --color-light-orange: #f89848;
+  --color-border-gray: #d9d9d9;
+  --color-grape: #7b0848;
+  --color-bright-blue: #009bca;
 
   --default-font-family: "Inter";
   --font-family-inter: "Inter";
@@ -53,7 +56,40 @@
            transition-all duration-800 ease-out;
   }
   .primary-btn-dot {
-    @apply h-2 w-2 rounded-full bg-white hidden;
+    @apply rounded-full bg-white
+           opacity-0 h-0 w-0 m-0
+           transition-opacity duration-800 ease-out;
+  }
+
+  .text-link-btn {
+    @apply rounded-full z-10 cursor-pointer text-dark-blue
+           relative overflow-hidden
+           text-xs font-bold px-2 py-1
+           inline-flex items-center justify-center gap-0
+           border border-dark-blue/20
+           md:text-sm md:px-4 md:py-2
+           transition-all duration-500 ease-out
+           before:absolute before:inset-0 
+         before:bg-gray-400 before:-z-10
+           before:w-0 before:rounded-l-full
+           before:transition-all before:duration-500 before:ease-out;
+  }
+  .text-link-btn-dot {
+    @apply rounded-full bg-turquoise-surf
+           opacity-0 h-0 w-0 m-0
+           transition-all duration-500 ease-out;
+  }
+
+  .sub-navigation-link {
+    @apply rounded-full cursor-pointer text-dark-gray
+           text-sm font-bold 
+           inline-flex items-center justify-center gap-0
+           transition-all duration-500 ease-out;
+  }
+  .sub-navigation-link-dot {
+    @apply rounded-full bg-bright-blue 
+           opacity-0 h-0 w-0 m-0
+           transition-all duration-500 ease-out;
   }
 
   .secondary-btn {
@@ -84,10 +120,36 @@
     @apply bg-darker-blue;
   }
   .nav-link {
-    @apply relative flex items-center gap-2 text-sm font-bold text-white;
+    @apply relative flex items-center gap-0 text-sm font-bold text-white
+           transition-all duration-500 ease-out;
   }
   .nav-link-dot {
-    @apply h-1.5 w-1.5 rounded-full bg-turquoise-surf hidden data-[active=true]:block;
+    @apply h-0 w-0 m-0 rounded-full bg-turquoise-surf data-[active=true]:block
+           opacity-0 transition-all duration-500 ease-out;
+  }
+  .nav-dropdown {
+    @apply absolute opacity-0 pointer-events-none 
+    invisible transition-all duration-500 ease-out 
+    top-full left-0 right-0 px-24
+    group-hover:opacity-100 group-hover:visible 
+    group-hover:pointer-events-auto
+    shadow-[0px_4px_32px_16px_#00000005];
+  }
+  .nav-dropdown-content {
+    @apply bg-white shadow rounded-b-xl;
+  }
+
+  .menu-item {
+    @apply cursor-default rounded-full py-2 px-4 gap-2.5 flex items-center text-sm font-bold text-dark-blue tracking-[10%];
+  }
+  .menu-item.active {
+    @apply bg-grape text-white;
+  }
+  .menu-item-content {
+    @apply hidden;
+  }
+  .menu-item-content.active {
+    @apply flex flex-col px-5 gap-6;
   }
 
   /* Hover effect for devices that support hover like desktop and laptop */
@@ -96,14 +158,36 @@
       @apply gap-2;
     }
     .primary-btn:hover .primary-btn-dot {
-      @apply block;
+      @apply opacity-100 h-2 w-2;
+    }
+
+    .text-link-btn:hover {
+      @apply gap-2 border-dark-blue before:w-full before:bg-light-gray 
+             before:transition-all before:duration-500 before:-z-10;
+    }
+    .text-link-btn:hover .text-link-btn-dot {
+      @apply opacity-100 h-1.5 w-1.5;
     }
 
     .nav-item:hover {
       @apply bg-darker-blue;
     }
-    .nav-link:hover .nav-link-dot {
-      @apply block;
+    .nav-item:hover .nav-link {
+      @apply gap-2;
+    }
+    .nav-item:hover .nav-link .nav-link-dot {
+      @apply opacity-100 h-1.5 w-1.5;
+    }
+
+    .sub-navigation-link:hover {
+      @apply gap-2 text-dark-blue;
+    }
+    .sub-navigation-link:hover .sub-navigation-link-dot {
+      @apply opacity-100 h-1.5 w-1.5;
+    }
+
+    .menu-item:hover {
+      @apply bg-grape text-white;
     }
   }
 }

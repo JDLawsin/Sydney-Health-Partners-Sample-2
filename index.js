@@ -36,3 +36,36 @@ breadcrumbLinks.forEach((link) => {
     parentLi.classList.remove("font-light", "text-light-gray");
   }
 });
+
+// Set active item based on hovered menu item
+document.addEventListener("DOMContentLoaded", function () {
+  const navDropdowns = document.querySelectorAll(".nav-dropdown");
+
+  navDropdowns.forEach((dropdown) => {
+    const menuItems = dropdown.querySelectorAll(".menu-item[data-tab]");
+    const contentItems = dropdown.querySelectorAll(".menu-item-content");
+
+    menuItems.forEach((item) => {
+      item.addEventListener("mouseenter", function () {
+        const tabName = this.getAttribute("data-tab");
+
+        menuItems.forEach((menuItem) => {
+          menuItem.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        contentItems.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        const activeContent = dropdown.querySelector(
+          `.menu-item-content[data-content="${tabName}"]`,
+        );
+        if (activeContent) {
+          activeContent.classList.add("active");
+        }
+      });
+    });
+  });
+});
