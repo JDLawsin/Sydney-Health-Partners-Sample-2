@@ -69,3 +69,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Show search dropdown on search button click
+const searchButton = document.getElementById("search-button");
+const searchDropdown = document.getElementById("search-dropdown");
+searchButton.addEventListener("click", () => {
+  searchDropdown.classList.add("show");
+});
+
+// Hide search dropdown on close icon click
+const closeButton = document.getElementById("close-btn");
+closeButton.addEventListener("click", () => {
+  searchDropdown.classList.remove("show");
+});
+
+// Hide search dropdown when clicking outside
+const searchDropdownContent = document.querySelector(
+  ".search-dropdown-content",
+);
+document.addEventListener("click", (e) => {
+  if (
+    !searchDropdownContent.contains(e.target) &&
+    !searchButton.contains(e.target)
+  ) {
+    searchDropdown.classList.remove("show");
+  }
+});
