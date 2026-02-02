@@ -19,7 +19,7 @@
     <div class="flex h-15 md:h-20 bg-white">
       <div class="flex w-500 justify-between px-6 md:px-24">
         <div class="flex items-center gap-3">
-          <a href="/" class="cursor-pointer hidden md:block">
+          <a href="/" class="cursor-pointer w-20 md:w-[231.66px] md:block">
             <img src="../../public/images/logo.png" alt="Company logo" width="231.6657257080078" height="50" />
           </a>
         </div>
@@ -55,19 +55,556 @@
     </div>
 
     <!-- Top Navigation Bar -->
-    <nav id="main-nav" class="flex h-14 bg-dark-blue border-b border-border-blue">
-      <div class="flex items-center justify-center md:justify-start px-24 w-full relative">
+    <nav id="main-nav" class="flex h-14 bg-dark-blue border-b border-border-blue relative">
+
+      <button id="hamburger-btn" class="md:hidden ml-8 top-1/2 -translate-y-1/2 absolute z-10">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M4 18L20 18" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M4 12L20 12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M4 6L20 6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+          </g>
+        </svg>
+      </button>
+
+      <!-- Mobile Dropdowns-->
+      <div class="nav-dropdown px-0" data-mobile-dropdown="knowledge-hub">
+        <div class="nav-dropdown-content">
+          <div class="flex flex-col">
+            <button type="button" class="close-mobile-dropdown-btn self-end pr-6 py-3 cursor-pointer ">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 5.25L5.25 18.75" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M18.75 18.75L5.25 5.25" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <!-- Dropdown Left Menu-->
+            <div class="flex flex-col justify-between">
+              <div class="flex flex-col gap-6 px-5">
+                <span class="menu-item active" data-tab="knowledge-hub">KNOWLEDGE HUB</span>
+                <span class="menu-item" data-tab="knowledge-pathways">KNOWLEDGE PATHWAYS</span>
+                <span class="menu-item" data-tab="curated-collection">CURATED COLLECTION</span>
+                <hr class="border-border-gray mx-5" />
+              </div>
+            </div>
+
+            <!-- Dropdown Right Menu Content -->
+            <div class="py-8">
+
+              <!-- Knowledge Hub Content-->
+              <div class="menu-item-content active" data-mobile-content="knowledge-hub">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">Knowledge Hub</h1>
+                    <p class="text-base font-regular text-black">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt
+                      ut labore et dolore magna
+                      adipiscing elit
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_20_2328)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_20_2328">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+              </div>
+
+              <!-- Knowledge Pathways Content -->
+              <div class="menu-item-content" data-mobile-content="knowledge-pathways">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">Knowledge Pathways</h1>
+                    <p class="text-base font-regular text-black">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt
+                      ut labore et dolore magna
+                      adipiscing elit
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_20_2328)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_20_2328">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+                <div class="flex gap-12 px-5 flex-row items-start ">
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Introduction to Health Research
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Designing your study
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Ethics, governance, and impact
+                  </span>
+                </div>
+              </div>
+
+              <!-- Curated Collection Content -->
+              <div class="menu-item-content" data-mobile-content="curated-collection">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">Curated Collection</h1>
+                    <p class="text-base font-regular text-black">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt
+                      ut labore et dolore magna
+                      adipiscing elit
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_20_2328)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_20_2328">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+                <div class="flex gap-12 px-5 flex-row items-start ">
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Beginner's research toolkit
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Customer Engagement in Action
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Research Methods Explained
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-dropdown px-0" data-mobile-dropdown="programs">
+        <div class="nav-dropdown-content">
+          <div class="flex flex-col">
+            <button type="button" class="close-mobile-dropdown-btn self-end pr-6 py-3 cursor-pointer ">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 5.25L5.25 18.75" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M18.75 18.75L5.25 5.25" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Left Menu-->
+            <div class="flex flex-col justify-between">
+              <div class="flex flex-col gap-6 px-5">
+                <span class="menu-item active" data-tab="clinical-academic-groups">CLINICAL ACADEMIC
+                  GROUPS</span>
+                <span class="menu-item" data-tab="implementation-science-academy">IMPLEMENTATION SCIENCE
+                  ACADEMY</span>
+                <span class="menu-item" data-tab="research-enabling-program">RESEARCH ENABLING PROGRAM</span>
+                <hr class="border-border-gray mx-5" />
+              </div>
+            </div>
+
+            <!-- Dropdown Right Menu Content -->
+            <div class="py-8">
+
+              <!-- Clinical Academic Group Content-->
+              <div class="menu-item-content active" data-content="clinical-academic-groups">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">Clinical Academic Groups</h1>
+                    <p class="text-base font-regular text-black">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                      ut labore et dolore magna
+                      adipiscing elit
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip-discover-programs)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip-discover-programs">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+
+                <div class="grid grid-cols-3 gap-12 px-5 justify-items-start">
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Child and Adolescent Health
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Cancer
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Cardiovascular
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Genomics and Precision Medicine
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Child Development and Mental Health
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Diabetes and Obesity
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Perioperative Care
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Geriatric Medicine
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Musculoskeletal
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Virtual Care
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Reproductive, Maternal and Newborn Health
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Sleep Health
+                  </span>
+                </div>
+              </div>
+
+              <!-- Implementation Science Academy Content-->
+              <div class="menu-item-content" data-content="implementation-science-academy">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">Implementation Science Academy</h1>
+                    <p class="text-base font-regular text-black">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                      ut labore et dolore magna
+                      adipiscing elit
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip-discover-programs)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip-discover-programs">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+
+                <div class="grid grid-cols-3 gap-12 px-5 justify-items-start">
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    About the academy
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Matching & Advisory Program
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Geriatic Medicine
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Academy Co-Leads
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Masterclass
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Academic Implementation Science Network
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Pilot Grans
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Fellows
+                  </span>
+
+                </div>
+              </div>
+
+              <!-- Research Enabling Program Content-->
+              <div class="menu-item-content" data-content="research-enabling-program">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">Research Enabling Program</h1>
+                    <p class="text-base font-regular text-black">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                      ut labore et dolore magna
+                      adipiscing elit
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip-discover-programs)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip-discover-programs">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+
+                <div class="grid grid-cols-3 gap-12 px-5 justify-items-start">
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    About the Program
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Research Governance
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Consumers in Research
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Clinical Trials support
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Data for Research
+                  </span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-dropdown px-0" data-mobile-dropdown="about-us">
+        <div class="nav-dropdown-content">
+          <div class="flex flex-col">
+            <button type="button" class="close-mobile-dropdown-btn self-end pr-6 py-3 cursor-pointer ">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 5.25L5.25 18.75" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M18.75 18.75L5.25 5.25" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <!-- Dropdown Left Menu-->
+            <div class="flex flex-col justify-between">
+              <div class="flex flex-col gap-6 px-5">
+                <span class="menu-item active" data-tab="about-us">ABOUT US</span>
+                <hr class="border-border-gray mx-5" />
+              </div>
+            </div>
+
+            <!-- Dropdown Right Menu Content -->
+            <div class="py-8">
+
+              <!-- About Us Content-->
+              <div class="menu-item-content active" data-content="about-us">
+                <div class="flex gap-6 flex-row items-start justify-between px-5">
+                  <div class="flex flex-col gap-2">
+                    <h1 class="font-bold text-neutral-jet text-lg">About Us</h1>
+                    <p class="text-base font-regular text-black">
+                      Groups dedicated to enhancing healthcare delivery through innovative research and
+                      community
+                      engagement.
+                    </p>
+                  </div>
+                  <div class="self-end">
+                    <button class="text-link-btn">
+                      <span class="text-link-btn-dot"></span>
+                      <div class="flex gap-2 items-center">
+                        <span>Discover</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip-discover-about-us)">
+                            <path d="M4.5 2.25L8.25 6L4.5 9.75" stroke="#1C1C1C" stroke-width="1.4"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip-discover-about-us">
+                              <rect width="12" height="12" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <div>
+                    </button>
+                  </div>
+                </div>
+                <hr class="border-border-gray mx-5" />
+
+                <div class="grid grid-cols-3 gap-12 px-5 justify-items-start">
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Our Plan
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Our Partners
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Our Impact
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Our Team
+                  </span>
+
+                  <span class="sub-navigation-link">
+                    <span class="sub-navigation-link-dot"></span>
+                    Governance
+                  </span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-        <!-- Search Dropdown -->
-        <div id="search-dropdown" class="search-dropdown">
-          <div class="search-dropdown-content relative">
-            <button id="close-btn" type="button" class="absolute top-5 right-5 p-1 cursor-pointer">
+      <!-- Mobile Nav Bar -->
+      <div id="mobile-nav-bar"
+        class="fixed inset-0 z-40 bg-black/50 transition-all duration-500 ease-out md:hidden hide">
+        <div
+          class="fixed inset-y-0 left-0 z-100 w-76 bg-dark-blue transform transition-all duration-500 ease-out md:hidden translate-x-0">
+          <div class="flex items-center justify-between p-4 border-b border-border-blue">
+            <span class="text-white font-semibold">Menu</span>
+            <button id="close-mobile-bar-btn" type="button"
+              class="p-2 text-white/80 hover:text-white transition-colors">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_561_10317)">
-                  <path d="M18.75 5.25L5.25 18.75" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  <path d="M18.75 5.25L5.25 18.75" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
-                  <path d="M18.75 18.75L5.25 5.25" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  <path d="M18.75 18.75L5.25 5.25" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </g>
                 <defs>
@@ -77,10 +614,57 @@
                 </defs>
               </svg>
             </button>
+          </div>
+
+          <nav class="p-4">
+            <ul class="space-y-1">
+              <li>
+                <button class="mobile-menu-item" data-mobile-menu="knowledge-hub">
+                  <span>Knowledge Hub</span>
+                </button>
+              </li>
+              <li>
+                <button class="mobile-menu-item" data-mobile-menu="programs">
+                  <span>Programs</span>
+                </button>
+              </li>
+              <li>
+                <a href="/" class="mobile-menu-item">
+                  <span>Trainings and Events</span>
+                </a>
+              </li>
+              <li>
+                <a href="/" class="mobile-menu-item">
+                  <span>News</span>
+                </a>
+              </li>
+              <li>
+                <button class="mobile-menu-item" data-mobile-menu="about-us">
+                  <span>About Us</span>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center md:justify-start px-24 w-full relative">
+
+        <!-- Search Dropdown -->
+        <div id="search-dropdown" class="search-dropdown">
+          <div class="search-dropdown-content relative">
+            <button id="close-btn" type="button" class="absolute top-5 right-5 p-1 cursor-pointer z-50">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.75 5.25L5.25 18.75" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M18.75 18.75L5.25 5.25" stroke="#6A6A6A" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
 
             <div class="flex flex-col gap-6">
               <span class="text-sm font-bold text-dark-blue tracking-[10%]">USE OUR NAVIGATION EXPLORER TOOL</span>
-              <div class="flex flex-row gap-3 items-center">
+              <div class="flex flex-col md:flex-row gap-3 md:items-center">
                 <span class="text-lg text-neutral-jet font-bold">I am</span>
 
                 <div class="combo-box-container">
@@ -168,10 +752,10 @@
 
               <span class="text-sm font-bold text-dark-blue tracking-[10%]">SEARCH BY KEYWORD</span>
 
-              <div class="flex flex-row items-center gap-8">
+              <div class="flex flex-col md:flex-row md:items-center gap-8">
 
                 <div class="combo-box-container">
-                  <input type="text" name="position" class="combo-box-input w-96"
+                  <input type="text" name="position" class="combo-box-input truncate w-full md:w-96"
                     value="Enter keyword to start searching sitewide" />
                   <button class="combo-box-button-icon">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -218,7 +802,7 @@
                 <span class="nav-link-dot"></span>
                 Knowledge Hub
               </div>
-              <div class="nav-dropdown">
+              <div class="nav-dropdown" data-dropdown="knowledge-hub">
                 <div class="nav-dropdown-content">
                   <div class="flex flex-row">
 
