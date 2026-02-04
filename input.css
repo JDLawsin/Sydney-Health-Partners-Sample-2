@@ -153,13 +153,18 @@
   .nav-item[data-active="true"] {
     @apply bg-darker-blue;
   }
+  .nav-item[data-active="true"] .nav-link {
+    @apply gap-2;
+  }
   .nav-link {
     @apply relative flex items-center gap-0 text-sm font-bold text-white
            transition-all duration-500 ease-out;
   }
   .nav-link-dot {
-    @apply h-0 w-0 m-0 rounded-full bg-turquoise-surf data-[active=true]:block
-           opacity-0 transition-all duration-500 ease-out;
+    @apply h-0 w-0 m-0 rounded-full bg-turquoise-surf opacity-0 transition-all duration-500 ease-out;
+  }
+  .nav-link-dot[data-active="true"] {
+    @apply opacity-100 h-1.5 w-1.5;
   }
   .nav-dropdown {
     @apply absolute opacity-0 pointer-events-none 
