@@ -93,15 +93,49 @@
   }
 
   .secondary-btn {
-    @apply bg-darker-blue text-white rounded-full text-sm font-bold px-6 py-3;
+    @apply bg-darker-blue text-white rounded-full text-sm 
+           relative overflow-hidden z-10
+           font-bold px-6 py-3 cursor-pointer           
+           md:text-sm md:px-6 md:py-3
+           inline-flex items-center justify-center gap-0 
+           transition-all duration-800 ease-out
+           before:absolute before:inset-0 
+         before:bg-[#FFFFFF]/10 before:-z-10
+           before:w-0 before:rounded-l-full
+           before:transition-all before:duration-100 before:ease-out;
+  }
+  .secondary-btn-dot {
+    @apply rounded-full bg-turquoise-surf
+           opacity-0 h-0 w-0 m-0
+           transition-opacity duration-800 ease-out;
   }
 
   .outline-btn {
-    @apply border border-dark-blue/30 bg-white text-dark-blue rounded-full text-base font-bold px-8 py-4;
+    @apply border border-dark-blue/30 bg-white text-dark-blue rounded-full text-base font-bold px-8 py-4 cursor-pointer;
   }
 
   .contact-us-btn {
-    @apply rounded-full bg-neutral-jet/40 text-white text-sm font-bold px-4 py-2;
+    @apply rounded-full z-10 cursor-pointer text-white
+         bg-neutral-jet/40
+           relative overflow-hidden
+           text-xs font-bold px-2 py-1
+           inline-flex items-center justify-center gap-0
+           border border-dark-blue/20
+           md:text-sm md:px-4 md:py-2
+           transition-all duration-500 ease-out
+           before:absolute before:inset-0 
+           before:bg-[#1D2435] before:-z-10
+           before:w-0
+           before:transition-all before:duration-500 before:ease-out;
+  }
+  .contact-us-btn-dot {
+    @apply rounded-full bg-turquoise-surf
+           opacity-0 h-0 w-0 m-0
+           transition-all duration-500 ease-out;
+  }
+
+  .icon-btn {
+    @apply rounded-full p-1.5 bg-light-gray flex items-center justify-center transition-all duration-500 ease-out;
   }
 
   .card {
@@ -166,7 +200,7 @@
   }
 
   .mobile-menu-item {
-    @apply w-full flex items-center justify-between
+    @apply w-full flex items-center
            px-4 py-3 text-left
            text-white font-medium text-sm
            rounded-lg
@@ -196,20 +230,53 @@
     @apply hidden absolute z-10 w-full mt-1 bg-white border rounded-lg shadow-lg;
   }
 
+  .accordion {
+    @apply mx-auto w-full flex flex-row justify-between rounded-xl bg-light-gray py-4 px-6 relative;
+  }
+  .accordion-container {
+    @apply w-full flex flex-col bg-light-gray absolute bottom-0 left-0 right-0 gap-2 rounded-xl transition-all duration-300 ease-out;
+  }
+  .accordion-header {
+    @apply mx-auto w-full flex flex-row justify-between bg-light-gray py-4 px-6 border-b border-dark-blue/10 rounded-t-xl;
+  }
+  .accordion-body {
+    @apply flex flex-col p-6 gap-4;
+  }
+
   /* Hover effect for devices that support hover like desktop and laptop */
   @media (hover: hover) {
     .primary-btn:hover {
       @apply gap-2;
+      background: #7b0848;
     }
     .primary-btn:hover .primary-btn-dot {
       @apply opacity-100 h-2 w-2;
     }
 
-    .text-link-btn:hover {
+    .secondary-btn:hover {
+      @apply gap-2 border border-white  before:w-full before:bg-darker-blue
+             before:transition-all before:duration-500 before:-z-10;
+    }
+    .secondary-btn:hover .secondary-btn-dot {
+      @apply opacity-100 h-2 w-2;
+    }
+
+    .text-link-btn:hover,
+    .parent-group:hover .text-link-btn {
       @apply gap-2 border-dark-blue before:w-full before:bg-light-gray 
              before:transition-all before:duration-500 before:-z-10;
     }
-    .text-link-btn:hover .text-link-btn-dot {
+    .text-link-btn:hover .text-link-btn-dot,
+    .parent-group:hover .text-link-btn .text-link-btn-dot {
+      @apply opacity-100 h-1.5 w-1.5;
+    }
+
+    .contact-us-btn:hover {
+      @apply gap-2 before:w-full before:bg-[#1D2435]
+             before:transition-all before:duration-500 before:-z-10
+             before:inset-x-4.5;
+    }
+    .contact-us-btn:hover .contact-us-btn-dot {
       @apply opacity-100 h-1.5 w-1.5;
     }
 
@@ -232,6 +299,13 @@
 
     .menu-item:hover {
       @apply bg-grape text-white;
+    }
+
+    .icon-btn:hover {
+      @apply bg-dark-blue;
+    }
+    .icon-btn:hover svg path {
+      @apply stroke-white;
     }
   }
 }

@@ -248,3 +248,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const openAccordion = document.getElementById("accordion-open-btn");
+const accordionContent = document.getElementById("accordion-container");
+openAccordion.addEventListener("click", () => {
+  accordionContent.classList.remove("hide");
+  accordionContent.classList.add("show");
+});
+
+const closeAccordion = document.getElementById("accordion-close-btn");
+closeAccordion.addEventListener("click", () => {
+  accordionContent.classList.remove("show");
+  accordionContent.classList.add("hide");
+});
+
+const commentBtn = document.querySelectorAll(".comment-btn");
+const popup = document.getElementById("popup");
+commentBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    popup.classList.remove("hide");
+    popup.classList.add("show");
+  });
+});
+
+document.addEventListener("click", (e) => {
+  const isClickInsidePopup = popup.contains(e.target);
+  const isClickOnCommentBtn = Array.from(commentBtn).some((btn) =>
+    btn.contains(e.target),
+  );
+
+  if (
+    !isClickInsidePopup &&
+    !isClickOnCommentBtn &&
+    popup.classList.contains("show")
+  ) {
+    popup.classList.remove("show");
+    popup.classList.add("hide");
+  }
+});
