@@ -50,10 +50,15 @@
   .primary-btn {
     background: linear-gradient(90deg, #7b0848 10%, #a41256 100%);
     @apply rounded-full cursor-pointer text-white
+           relative overflow-hidden z-10
            text-xs font-bold px-3 py-1.5
            md:text-sm md:px-6 md:py-3
            inline-flex items-center justify-center gap-0 
-           transition-all duration-800 ease-out;
+           transition-all duration-800 ease-out
+           before:absolute before:inset-0 
+           before:bg-grape before:-z-10
+           before:w-0 before:rounded-l-full
+           before:transition-all before:duration-100 before:ease-out;
   }
   .primary-btn-dot {
     @apply rounded-full bg-white
@@ -251,8 +256,8 @@
   /* Hover effect for devices that support hover like desktop and laptop */
   @media (hover: hover) {
     .primary-btn:hover {
-      @apply gap-2;
-      background: #7b0848;
+      @apply gap-2 before:w-full before:bg-grape 
+             before:transition-all before:duration-100 before:-z-10;
     }
     .primary-btn:hover .primary-btn-dot {
       @apply opacity-100 h-2 w-2;
@@ -306,10 +311,12 @@
       @apply bg-grape text-white;
     }
 
-    .icon-btn:hover {
+    .icon-btn:hover,
+    .parent-group:hover .icon-btn {
       @apply bg-dark-blue;
     }
-    .icon-btn:hover svg path {
+    .icon-btn:hover svg path,
+    .parent-group:hover .icon-btn svg path {
       @apply stroke-white;
     }
   }

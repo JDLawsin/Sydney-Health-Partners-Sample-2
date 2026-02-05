@@ -749,10 +749,10 @@
         <div class="hidden md:block h-full">
           <ul class="flex items-center h-full gap-6">
             <li class="group nav-item">
-              <a href="/knowledge-hub" class="nav-link">
+              <div class="nav-link">
                 <span class="nav-link-dot"></span>
                 Knowledge Hub
-              </a>
+              </div>
               <div class="nav-dropdown" data-dropdown="knowledge-hub">
                 <div class="nav-dropdown-content">
                   <div class="flex flex-row">
@@ -964,10 +964,10 @@
               </div>
             </li>
             <li class="group nav-item">
-              <a href="/programs" class="nav-link">
+              <div class="nav-link">
                 <span class="nav-link-dot"></span>
                 Programs
-              </a>
+              </div>
 
               <div class="nav-dropdown">
                 <div class="nav-dropdown-content">
@@ -1290,10 +1290,10 @@
               </a>
             </li>
             <li class="group nav-item">
-              <a href="/about-us" class="nav-link">
+              <div class="nav-link">
                 <span class="nav-link-dot"></span>
-                About Us
-              </a>
+                About us
+              </div>
               <div class="nav-dropdown">
                 <div class="nav-dropdown-content">
                   <div class="flex flex-row">
@@ -1941,7 +1941,7 @@
 
       </div>
       <div class="mt-4 lg:mt-0 lg:pl-20">
-        <div class="bg-light-gray rounded-tl-xl rounded-bl-xl gap-2 pt-8 pr-24 pb-10 pl-8">
+        <div class="bg-light-gray rounded-tl-xl rounded-bl-xl gap-2 pt-8 pr-8 md:pr-24 pb-10 pl-8">
           <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-4">
               <h4 class="text-lg font-bold text-neutral-jet">
@@ -1950,8 +1950,8 @@
 
               <div class="flex flex-col gap-2">
                 <span class="text-sm font-bold text-dark-blue">INCLUDED IN KNOWLEDGE PATHWAYS</span>
-                <div class="flex flex-col bg-white p-3 rounded-lg gap-3 w-full min-w-76 lg:min-w-0">
-                  <div class="flex flex-row justify-between">
+                <div class="flex flex-col bg-white p-3 rounded-lg gap-3 w-full">
+                  <div class="flex flex-row justify-between parent-group">
                     <span class="text-base font-bold text-dark-blue">Introduction to Health Research</span>
                     <a href="" class="icon-btn">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1967,7 +1967,7 @@
                       </svg>
                     </a>
                   </div>
-                  <div class="flex flex-row justify-between">
+                  <div class="flex flex-row justify-between parent-group">
                     <span class="text-base font-bold text-dark-blue">Clinical Research Methods</span>
                     <a href="" class="icon-btn">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1988,8 +1988,8 @@
 
               <div class="flex flex-col gap-2">
                 <span class="text-sm font-bold text-dark-blue">INCLUDED IN CURATED COLLECTIONS</span>
-                <div class="flex flex-col bg-white p-3 rounded-lg gap-3 min-w-76 lg:min-w-0">
-                  <div class="flex flex-row items-center justify-center md:justify-between">
+                <div class="flex flex-col bg-white p-3 rounded-lg gap-3">
+                  <div class="flex flex-row items-center justify-between parent-group">
                     <span class="text-base font-bold text-dark-blue">Research Ethics and Governance</span>
                     <a href="" class="icon-btn">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2005,7 +2005,7 @@
                       </svg>
                     </a>
                   </div>
-                  <div class="flex flex-row items-center justify-center md:justify-between">
+                  <div class="flex flex-row items-center justify-between parent-group">
                     <span class="text-base font-bold text-dark-blue">Consumer engangement in action</span>
                     <a href="" class="icon-btn">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2029,7 +2029,7 @@
               <h4 class="text-lg font-bold text-neutral-jet">
                 Share, print, and save
               </h4>
-              <div class="flex flex-row gap-3.5">
+              <div class="flex flex-row flex-wrap gap-3.5">
                 <a href="" class="icon-btn p-3.5">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -2100,7 +2100,7 @@
 
         <div class="flex flex-col lg:flex-row gap-6">
           <div
-            class="card parent-group group flex flex-col transition-all duration-500 ease-out overflow-hidden relative h-67 hover:h-55">
+            class="card parent-group group flex flex-col transition-all duration-500 ease-out overflow-hidden relative h-80 md:h-67 hover:h-55">
             <div class="flex flex-row gap-3 items-center">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="40" height="40" rx="8" fill="#1F3262" />
@@ -2156,7 +2156,7 @@
           </div>
 
           <div
-            class="card parent-group group flex flex-col transition-all duration-500 ease-out overflow-hidden relative h-67 hover:h-55">
+            class="card parent-group group flex flex-col transition-all duration-500 ease-out overflow-hidden relative h-80 md:h-67 md:hover:h-55">
             <div class="flex flex-row gap-3 items-center">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="40" height="40" rx="8" fill="#1F3262" />
@@ -2212,7 +2212,7 @@
             </svg>
           </div>
 
-          <div class="card flex flex-col h-67">
+          <div class="card flex flex-col h-80 md:h-67">
             <div class="flex flex-row gap-3 items-center">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="40" height="40" rx="8" fill="#1F3262" />
@@ -2372,7 +2372,7 @@
           <div class="flex flex-col">
             <span class="text-sm text-light-gray font-normal">Level 2 The Hub</span>
             <span class="text-sm text-light-gray font-normal">Charles Perkins Centre (D17)</span>
-            <span class="text-sm text-light-gray font-normal">The university of Sydney NSW 2006</span>
+            <span class="text-sm text-light-gray font-normal">The University of Sydney NSW 2006</span>
           </div>
 
           <div class="flex flex-row gap-x-4 items-center">
@@ -2403,11 +2403,11 @@
 
           <div class="flex flex-col gap-y-5">
             <h4 class="text-sm font-bold text-light-orange">QUICK LINKS</h4>
-            <div class="flex flex-row min-w-90 justify-between">
+            <div class="flex flex-row w-full md:min-w-90 justify-between">
               <div class="flex flex-col gap-y-5 items-start">
                 <a href="" class="sub-navigation-link text-sm text-light-gray font-normal">
                   <span class="sub-navigation-link-dot"></span>
-                  About Us
+                  About us
                 </a>
 
                 <a href="" class="sub-navigation-link text-sm text-light-gray font-normal">
